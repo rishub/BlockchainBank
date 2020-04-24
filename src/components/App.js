@@ -126,7 +126,8 @@ class App extends Component {
     return (
       <div>
         <h1>Bank $$$</h1>
-        <h3>Your bank balance: {this.state.balance} Ether</h3>
+        <h4>Account: {this.state.account}</h4>
+        <h2>Your bank balance: {this.state.balance} Ether</h2>
         <input type="number" step="0.01" onChange={this.setDepositAmount} value={this.state.depositAmount} />
         <button onClick={this.deposit}>Deposit</button>
         <button onClick={this.withdraw} className="withdraw-button">Withdraw all funds</button>
