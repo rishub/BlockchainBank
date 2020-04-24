@@ -64,7 +64,6 @@ class App extends Component {
     this.state.contract.methods.deposit(this.state.account)
       .send({ from: this.state.account, value: this.state.depositAmount * 10 ** 18 })
       .on('confirmation', confirmationNumber => {
-        console.log(confirmationNumber)
         if (confirmationNumber === 2) {
           const depositAmount = that.state.depositAmount;
           that.updateBalance();

@@ -1623,6 +1623,12 @@
       "links": {},
       "address": "0xa24a38B199bfD6aBe18C2308632A2BB2D49e0f94",
       "transactionHash": "0x244e7359053a4893d9dc6affef823c85fb1e67a25212323a389342829ce602ef"
+    },
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0xb288badff9a72f8703120d2e15a503eaae3e60a6",
+      "transactionHash": "0xb9add10e2ee10e7b7d31a96c25fe36d69b79ab43745285476defc9116756df19"
     }
   },
   "schemaVersion": "3.1.0",
