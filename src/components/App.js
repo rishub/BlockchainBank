@@ -64,7 +64,7 @@ class App extends Component {
     this.state.contract.methods.deposit(this.state.account)
       .send({ from: this.state.account, value: this.state.depositAmount * 10 ** 18 })
       .on('confirmation', confirmationNumber => {
-        if (confirmationNumber === 2) {
+        if (confirmationNumber === 1) {
           const depositAmount = that.state.depositAmount;
           that.updateBalance();
           that.setState({ depositAmount: 0});
@@ -87,7 +87,7 @@ class App extends Component {
     this.state.contract.methods.withdraw(this.state.account)
       .send({ from: this.state.account })
       .on('confirmation', confirmationNumber => {
-        if (confirmationNumber === 2) {
+        if (confirmationNumber === 1) {
           const balance = that.state.balance;
           that.updateBalance();
           that.setLoading(false);
