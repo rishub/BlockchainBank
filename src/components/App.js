@@ -65,7 +65,7 @@ class App extends Component {
       .send({ from: this.state.account, value: this.state.depositAmount * 10 ** 18 })
       .on('confirmation', confirmationNumber => {
         console.log(confirmationNumber)
-        if (confirmationNumber === 1) {
+        if (confirmationNumber === 2) {
           const depositAmount = that.state.depositAmount;
           that.updateBalance();
           that.setState({ depositAmount: 0});
@@ -88,7 +88,7 @@ class App extends Component {
     this.state.contract.methods.withdraw(this.state.account)
       .send({ from: this.state.account })
       .on('confirmation', confirmationNumber => {
-        if (confirmationNumber === 1) {
+        if (confirmationNumber === 2) {
           const balance = that.state.balance;
           that.updateBalance();
           that.setLoading(false);
@@ -112,7 +112,7 @@ class App extends Component {
   setLoading = loading => this.setState({ loading })
   setLoadingMessage = loadingMessage => this.setState({ loadingMessage })
 
-  sendAlert = message => setTimeout(() => alert(message), 200)
+  sendAlert = message => setTimeout(() => alert(message), 500)
 
   render() {
     if(this.state.loading) {
